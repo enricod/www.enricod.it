@@ -1,8 +1,13 @@
 body {
   padding-top: 50px;
   font-family: 'Cutive Mono' ;
+  font-size: 18pt;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+.main-content {
+    margin: 10px;
 }
