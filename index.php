@@ -1,6 +1,6 @@
 <?php
 // *nix style (note capital 'S')
-define('SMARTY_DIR', __DIR__ . '/Smarty-3.1.29/libs/');
+define('SMARTY_DIR', __DIR__ . '/smarty-3.1.29/libs/');
 
 require_once(SMARTY_DIR . 'Smarty.class.php');
 $smarty = new Smarty();
@@ -23,7 +23,7 @@ function nomeFileValido($var) {
     return substr( $var, 0, 1 ) !== ".";
 }
 
-//print_r(array_filter($images, "nomeValido"));
+// print_r(array_filter($images, "nomeValido"));
 $smarty->assign("images", array_filter($images, "nomeFileValido"));
 $smarty->display('index.tpl');
 
