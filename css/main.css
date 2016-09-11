@@ -1,7 +1,15 @@
 body {
   padding-top: 50px;
+  /*
   font-family: 'Cutive Mono' ;
-  font-size: 18pt;
+font-family: 'Rokkitt', serif;  
+  font-family: 'Rokkitt', serif;
+  */
+
+
+font-family: 'Special Elite', cursive;
+
+  font-size: 16pt;
 }
 .starter-template {
   padding: 40px 15px;

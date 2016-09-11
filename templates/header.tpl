@@ -8,12 +8,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'> -->
+    <!--
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
     <title>{$title}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href="css/main.css" rel="stylesheet">
@@ -28,7 +36,9 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="bower_components/blueimp-gallery/js/blueimp-gallery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.min.css">
+    <script src="js/bootstrap-image-gallery.min.js"></script>
 
   </head>
 
@@ -43,12 +53,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Enrico Donelli Photographer</a>
+          <a class="navbar-brand" href="index.php">Enrico Donelli Photographer &nbsp; &nbsp;</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse"  >
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.php">Home</a></li>
-            <li ><a href="about.php">About</a></li>
+            <li {if $page eq 'index'}class="active"{/if}><a href="index.php">Home</a></li>
+            <li {if $page eq 'galleries'}class="active"{/if}><a href="galleries.php">Galleries</a></li>
+            <li {if $page eq 'about'}class="active"{/if}><a href="about.php">About</a></li>
             <!-- <li><a href="contact.php">Contact</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->

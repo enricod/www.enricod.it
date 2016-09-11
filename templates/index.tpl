@@ -1,5 +1,5 @@
 {config_load file="test.conf" section="setup"}
-{include file="header.tpl" title="Enrico Donelli Photography"}
+{include file="header.tpl" title="Enrico Donelli Photography" page="index"}
 
 
 

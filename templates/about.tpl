@@ -1,5 +1,5 @@
 {config_load file="test.conf" section="setup"}
-{include file="header.tpl" title="Enrico Donelli Photography"}
+{include file="header.tpl" title="Enrico Donelli Photography" page="about"}
 
 <div class="container">
     <!-- Full Page Image Background Carousel Header -->
@@ -9,6 +9,7 @@
     </header>
 
         <div>
+            <p>Enrico Donelli</p>
             <p>I live in Brescia, Italy.</p>
             <p>Father of two girls, passionate photographer.</p>
 
