@@ -1,5 +1,5 @@
 {config_load file="test.conf" section="setup"}
-{include file="header.tpl" title="Enrico Donelli Photography" page="about"}
+{include file="header.tpl" title="Enrico Donelli Photography" page="galleries"}
 
 
 
@@ -13,7 +13,7 @@
 
     <div class="row">
         <div class="col-md-4"><a href="./gallery.php?g=mongolia" ><img 
-                    src="photographs/galleries/mongolia/250/20160708-IMG_2045-Modifica.jpg" 
+                    src="photographs/galleries/mongolia/thumbs/20160708-IMG_2045-Modifica.jpg" 
                     alt="mongolia"></a> </div>
         <div class="col-md-4"> </div>
         <div class="col-md-4"> </div>

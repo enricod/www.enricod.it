@@ -1,5 +1,5 @@
 {config_load file="test.conf" section="setup"}
-{include file="header.tpl" title="Enrico Donelli Photography" page="about"}
+{include file="header.tpl" title="Enrico Donelli Photography" page="galleries"}
 
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
     <div class="slides"></div>
@@ -21,8 +21,8 @@
     <div>
         <div id="links">
            {foreach $images as $v}
-                <a href="photographs/galleries/{$gallery}/800/{$v}" title="{$v}" data-gallery>
-                    <img src="photographs/galleries/{$gallery}/250/{$v}" alt="{$v}">
+                <a href="photographs/galleries/{$gallery}/small/{$v}" title="{$v}" data-gallery>
+                    <img src="photographs/galleries/{$gallery}/thumbs/{$v}" alt="{$v}">
                 </a>
            {/foreach}
         </div>

@@ -38,7 +38,6 @@
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/blueimp-gallery/js/blueimp-gallery.min.js"></script>
     <link rel="stylesheet" href="bower_components/blueimp-gallery/css/blueimp-gallery.min.css">
-    <script src="js/bootstrap-image-gallery.min.js"></script>
 
   </head>
 

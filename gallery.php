@@ -13,7 +13,7 @@ function endsWith($haystack, $needle) {
 
 $gallery = $_GET["g"];
 
-$dir    = __DIR__ . '/photographs/galleries/' . $gallery  . '/1200/';
+$dir    = __DIR__ . '/photographs/galleries/' . $gallery  . '/small/';
 $images = scandir($dir);
 
 
