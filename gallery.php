@@ -21,17 +21,44 @@ function trovaJsonGalleria($galleries, $nome) {
     return $gal;
 }
 
-$gal = trovaJsonGalleria($galleries, $_GET["g"]);
-
-
-$dir    = __DIR__ . '/photographs/galleries/' . $gal->dirname  . '/small/';
-$images = scandir($dir);
-
 function nomeFileValido($var) {
     return substr( $var, 0, 1 ) !== "." && endsWith($var, ".jpg");
 }
 
-$smarty->assign("images",array_filter($images, "nomeFileValido"));
+$gal = trovaJsonGalleria($galleries, $_GET["g"]);
+
+class Image {
+
+};
+$dir    = __DIR__ . '/photographs/galleries/' . $gal->dirname  . '/small/';
+$imageNames = scandir($dir);
+
+$validNames = array_filter($imageNames, "nomeFileValido");
+function cercaImmagineDesc($gal, $filename) {
+    foreach( $gal->images as $i) {
+        if ($i->filename == $filename) {
+            return $i;
+        }
+    }
+    return NULL;
+}
+$images = array();
+foreach( $validNames as $n ) {
+    $i = new Image();
+    $i->filename = $n;
+    
+    $describedImage = cercaImmagineDesc($gal, $n);
+
+    if ($describedImage) {
+        $i->titolo = $describedImage->titolo;
+    } else {
+        $i->titolo = $i->filename;
+    }
+
+    array_push($images, $i);
+}
+
+$smarty->assign("images", $images);
 $smarty->assign("gallery", $gal);
 $smarty->display('gallery.tpl');
 ?>

@@ -4,9 +4,13 @@
     "coverImage":"5.jpg",
     "images":[
         {
-            "filename":"",
-            "caption":"",
+            "filename":"0.jpg",
+            "titolo":"Addis Abeba",
             "description":""
+        },
+        {
+            "filename":"11.jpg",
+            "titolo":"wedding in Harar"
         }
     ]
 }

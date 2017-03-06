@@ -22,8 +22,8 @@
     <div>
         <div id="links" >
            {foreach $images as $v}
-                <a href="photographs/galleries/{$gallery->dirname}/small/{$v}" title="{$v}" data-gallery>
-                    <img style="padding:4px" src="photographs/galleries/{$gallery->dirname}/thumbs/{$v}" alt="{$v}">
+                <a href="photographs/galleries/{$gallery->dirname}/small/{$v->filename}" title="{$v->titolo}" data-gallery>
+                    <img style="padding:4px" src="photographs/galleries/{$gallery->dirname}/thumbs/{$v->filename}" alt="{$v->titolo}">
                 </a>
            {/foreach}
         </div>
