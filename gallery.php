@@ -12,12 +12,17 @@ function endsWith($haystack, $needle) {
     return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
 }
 
-$galleryName = $_GET["g"];
-foreach( $galleries as $g) {
-  if ($g->nome == $galleryName) {
-    $gal = $g;
-  }
+function trovaJsonGalleria($galleries, $nome) {
+    foreach( $galleries as $g) {
+        if ($g->dirname == $nome) {
+            $gal = $g;
+        }
+    }
+    return $gal;
 }
+
+$gal = trovaJsonGalleria($galleries, $_GET["g"]);
+
 
 $dir    = __DIR__ . '/photographs/galleries/' . $gal->dirname  . '/small/';
 $images = scandir($dir);
