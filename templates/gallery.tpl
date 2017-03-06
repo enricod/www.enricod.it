@@ -14,7 +14,7 @@
 <div class="container">
     <!-- Full Page Image Background Carousel Header -->
     <header >
-        <h1>Galleries / {$gallery->nome}</h1>
+        <h2><a href="galleries.php">Galleries</a> / {$gallery->nome}</h2>
     </header>
     <div>
       {$gallery->desc}
