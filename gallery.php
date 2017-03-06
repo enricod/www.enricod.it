@@ -1,5 +1,6 @@
 <?php
 require_once('_smarty.inc.php');
+require_once('_galleries.inc.php');
 
 function startsWith($haystack, $needle) {
     // search backwards starting from haystack length characters from the end
@@ -11,17 +12,21 @@ function endsWith($haystack, $needle) {
     return $needle === "" || (($temp = strlen($haystack) - strlen($needle)) >= 0 && strpos($haystack, $needle, $temp) !== false);
 }
 
-$gallery = $_GET["g"];
+$galleryName = $_GET["g"];
+foreach( $galleries as $g) {
+  if ($g->nome == $galleryName) {
+    $gal = $g;
+  }
+}
 
-$dir    = __DIR__ . '/photographs/galleries/' . $gallery  . '/small/';
+$dir    = __DIR__ . '/photographs/galleries/' . $gal->dirname  . '/small/';
 $images = scandir($dir);
-
 
 function nomeFileValido($var) {
     return substr( $var, 0, 1 ) !== "." && endsWith($var, ".jpg");
 }
 
 $smarty->assign("images",array_filter($images, "nomeFileValido"));
-$smarty->assign("gallery", $gallery);
+$smarty->assign("gallery", $gal);
 $smarty->display('gallery.tpl');
 ?>

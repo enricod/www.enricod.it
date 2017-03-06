@@ -11,13 +11,13 @@
 
     </header>
 
+    
     <div class="row">
-        <div class="col-md-4"><a href="./gallery.php?g=mongolia" ><img 
-                    src="photographs/galleries/mongolia/thumbs/20160708-IMG_2045-Modifica.jpg" 
-                    alt="mongolia"></a> </div>
-        <div class="col-md-4"> </div>
-        <div class="col-md-4"> </div>
-
+        {foreach $galleries as $g}
+        <div class="col-md-4"><a href="./gallery.php?g={$g->nome}" ><img
+                    src="photographs/galleries/{$g->dirname}/thumbs/{$g->thumb}"
+                    alt="{$g->nome}"></a> <br />{$g->nome}</div>
+        {/foreach}
     </div>
 
 

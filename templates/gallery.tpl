@@ -14,15 +14,16 @@
 <div class="container">
     <!-- Full Page Image Background Carousel Header -->
     <header >
-        <h1>Galleries / {$gallery}</h1>
-
+        <h1>Galleries / {$gallery->nome}</h1>
     </header>
-
     <div>
-        <div id="links">
+      {$gallery->desc}
+    </div>
+    <div>
+        <div id="links" >
            {foreach $images as $v}
-                <a href="photographs/galleries/{$gallery}/small/{$v}" title="{$v}" data-gallery>
-                    <img src="photographs/galleries/{$gallery}/thumbs/{$v}" alt="{$v}">
+                <a href="photographs/galleries/{$gallery->dirname}/small/{$v}" title="{$v}" data-gallery>
+                    <img style="padding:4px" src="photographs/galleries/{$gallery->dirname}/thumbs/{$v}" alt="{$v}">
                 </a>
            {/foreach}
         </div>
